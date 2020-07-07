@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable,Subscription} from 'rxjs';
+import {ProductsService} from './products.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blogapp';
+  constructor(public productsService : ProductsService) { 
+    
+  }
+
+  ngOnInit(): void {
+  }
+
 }
+
+
